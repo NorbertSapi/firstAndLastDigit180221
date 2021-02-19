@@ -20,7 +20,13 @@ public class Main {
             return number * 2;
         }
         int sumDigit = 0;
-
+        while (continueNumber >= 10) {              // get the other digit
+            int digit = continueNumber % 10;
+            continueNumber /= 10;
+            if (continueNumber < 10) {
+                sumDigit = firstDigit + continueNumber; // sum digits
+            }
+        }
         return sumDigit;
     }
 }
